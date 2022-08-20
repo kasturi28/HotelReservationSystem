@@ -2,35 +2,53 @@ package workshoproblem;
 
 public class Hotel {
 
-	private String hotelName;
-	private long rate;
+	private String name;
+	private int regularWeekdayRate;
+	private int regularWeekendRate;
 	
-	public String getHotelName() {
-		return hotelName;
-	}
-	public void setHotelName(String hotelName) {
-		this.hotelName = hotelName;
-	}
-	public long getRate() {
-		return rate;
-	}
-	public void setRate(long rate) {
-		this.rate = rate;
-	}
-	
-	Hotel(){
+
+	public Hotel(String name, int regularWeekdayRate, int regularWeekendRate) {
+		this.name = name;
+		this.regularWeekdayRate = regularWeekdayRate;
+		this.regularWeekendRate = regularWeekendRate;
 		
 	}
-	
-	public Hotel(String hotelName, long rate) {
-		this.hotelName = hotelName;
-		this.rate = rate;
+
+	public String getName() {
+		return name;
 	}
-	
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getRegularWeekdayRate() {
+		return regularWeekdayRate;
+	}
+
+	public void setRegularWeekdayRate(int regularWeekdayRate) {
+		this.regularWeekdayRate = regularWeekdayRate;
+	}
+
+	public int getRegularWeekendRate() {
+		return regularWeekendRate;
+	}
+
+	public void setRegularWeekendRate(int regularWeekendRate) {
+		this.regularWeekendRate = regularWeekendRate;
+	}
+
+
+
+	Hotel() {
+
+	}
+
 	@Override
 	public String toString() {
-		return "Hotel [hotelName=" + hotelName + ", rate=" + rate + "]";
+		return "Hotel [name=" + name + ", regularWeekdayRate=" + regularWeekdayRate + ", regularWeekendRate="
+				+ regularWeekendRate + "]";
 	}
-	
+
 	
 }
